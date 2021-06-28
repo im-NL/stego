@@ -20,8 +20,3 @@ for height in range(0, img.size[0], 10):
             print(word)
 
 print(word)
-
-print(f'{pixelMap[5, 5]} pixelz')
-
-img.show()
-#img.save(r'C:\Users\adush\Downloads\encoded.png')
