@@ -1,8 +1,6 @@
 from PIL import Image
 import time 
-import string 
-im = Image.open(r'C:\Users\adush\Downloads\encoded.png')
-pixelMap = im.load()
+import string
 
 alphabet = string.ascii_uppercase
 a = 0

@@ -22,4 +22,4 @@ for height in range(0, 1920, 50):
         except:
             print(word)
 
-print(word[:number_of_chars[0]])
+print(f'DECODED MESSAGE: {word[:number_of_chars[0]]}')
