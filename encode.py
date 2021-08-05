@@ -1,27 +1,30 @@
 from PIL import Image
 import time 
 import string 
-im = Image.open(r'PATH TO ANY IMAGE')
+im = Image.open(r'C:\Users\adush\Downloads\encoded.png')
 pixelMap = im.load()
 
 alphabet = string.ascii_uppercase
 a = 0
-word = input('What word do you want to hide? ').replace(' ', '').upper()
+word = input('What word do you want to hide? ').upper()
 print(word)
 time.sleep(3)
-img = Image.new(im.mode, im.size)
+img = Image.new('RGBA', (1920, 1080))
 pixelsNew = img.load()
-
-for height in range(0, img.size[0], 10):
-    for width, letter in zip(range(0, img.size[1], 10), word):
+pixelsNew[777, 777] = (len(word), 0, 0, 0)
+for height in range(0, 1920//len(word), 50):
+    for width, letter in zip(range(0, 1080, 50), word):
 
         try:
-            pixelsNew[height, width] = (alphabet.index(letter), 100, 0, 255)
+            if letter == ' ':
+                pixelsNew[height, width] = (69, 100, 0, 255)
+            else:
+                pixelsNew[height, width] = (alphabet.index(letter), 100, 0, 255)
         except Exception as e:
             print(e)
 
         print('colored')        
         a +=1   
-        
+
 print('operation complete')
-img.save(r'PATH TO THE SAME IMAGE AT "IM" VARIABLE')
+img.save(r'C:\Users\adush\Downloads\encoded.png')
