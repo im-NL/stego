@@ -10,8 +10,8 @@ word = ''
 img = Image.new(im.mode, im.size)
 pixelsNew = img.load()
 number_of_chars = pixelMap[777, 777]
-for height in range(0, 1920, 50):
-    for width in range(0, 1080, 50):
+for height in range(0, 1920, 10):
+    for width in range(0, 1080, 10):
 
         letter, g, b, a = pixelMap[height, width] 
         try:
