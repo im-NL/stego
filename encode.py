@@ -15,9 +15,9 @@ for height in range(0, 1920, 10):
 
         try:
             if letter == ' ':
-                pixelsNew[height, width] = (69, 100, 0, 255)
+                pixelsNew[height, width] = (69, 0, 0, 0)
             else:
-                pixelsNew[height, width] = (alphabet.index(letter), 100, 0, 255)
+                pixelsNew[height, width] = (alphabet.index(letter), 0, 0, 0)
         except Exception as e:
             print(e)
 
