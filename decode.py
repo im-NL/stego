@@ -7,7 +7,7 @@ alphabet = string.ascii_uppercase
 
 word = ''
 
-img = Image.open(r'C:\Users\adush\Downloads\encoded.png')
+img = Image.open(r'C:\Users\adush\Downloads\encoded.png')   # enter path to image here
 pixelsNew = img.load()
 number_of_chars = pixelMap[777, 777]
 for height in range(0, 1920, 10):
