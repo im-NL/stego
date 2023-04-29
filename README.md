@@ -7,4 +7,4 @@ We found a way to hide messages inside images in a simple, efficient and fast wa
 # USES
 Our tool could have endless uses in many different areas. It could be used anywhere where messages need to be secretive or .It can be used by armies to convey secret messages online, as nobody would suspect a virtually transparent image. Ciphers were actually used in World War 2 germany to send messages, they used something called an enigma machine to encode and decode their messages. ``Google Enigma Machine`` or ``Collosus Computers`` for more information on that.
 
-```Idea and implementation by Aryan Sharma and Pancham Agarwal```
+haan cryptic hunt walo ko bhi yahi use karna hai 
