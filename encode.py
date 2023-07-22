@@ -6,8 +6,8 @@ alphabet = string.ascii_uppercase
 a = 0
 word = input('What word do you want to hide? ').upper()
 print(word)
-# time.sleep(3)
-img = Image.open(r'C:\Users\adush\Downloads\decoder.png')
+
+img = Image.new('RGBA', (1920, 1080))
 pixelsNew = img.load()
 pixelsNew[777, 777] = (len(word), 0, 0, 0)
 for height in range(0, 1920, 10):
@@ -17,7 +17,10 @@ for height in range(0, 1920, 10):
             if letter == ' ':
                 pixelsNew[height, width] = (69, 0, 0, 0)
             else:
-                pixelsNew[height, width] = (alphabet.index(letter), 0, 0, 0)
+                try:
+                    pixelsNew[height, width] = (alphabet.index(letter), 0, 0, 0)
+                except:
+                    pixelsNew[height, width] = (len(alphabet)+int(letter), 0, 0, 0)
         except Exception as e:
             print(e)
 
