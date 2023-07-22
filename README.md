@@ -1,5 +1,5 @@
 # STEGANOGRAPHY 
-remember to star the repo if you like it!
+remember to star the repo if you like it! <br>
 *MAKE SURE you run this command before trying to decode the image*
 ```
 pip install pillow
