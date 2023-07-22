@@ -27,4 +27,4 @@ for height in range(0, 1920, 10):
         print('colored')
 
 print('operation complete')
-img.save(r'C:\Users\adush\Downloads\encoded.png')
+img.save(r'encoded.png') # enter path to where you want to save the image

@@ -1,6 +1,6 @@
 from PIL import Image
 import string 
-im = Image.open(r'C:\Users\adush\Downloads\encoded.png')
+im = Image.open('encoded.png') # enter path to encoded file 
 pixelMap = im.load()
 a = 0 
 alphabet = string.ascii_uppercase
