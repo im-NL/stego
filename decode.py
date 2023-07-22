@@ -1,13 +1,13 @@
 from PIL import Image
 import string 
-im = Image.open(r'PATH TO ENCODED IMAGE')
+im = Image.open(r'C:\Users\adush\Downloads\encoded.png')
 pixelMap = im.load()
 a = 0 
 alphabet = string.ascii_uppercase
 
 word = ''
 
-img = Image.open(r'PATH TO ENCODED IMAGE')   # enter path to image here
+img = Image.new(im.mode, im.size)
 pixelsNew = img.load()
 number_of_chars = pixelMap[777, 777]
 for height in range(0, 1920, 10):
@@ -18,8 +18,11 @@ for height in range(0, 1920, 10):
             if letter == 69:
                 word += ' '
             else:
-                word += alphabet[letter]   
+                try:
+                    word += alphabet[letter]   
+                except:
+                    word += str(int(letter) - len(alphabet))
         except:
-            print(word[:number_of_chars[0]])
+            print(word)
 
-print(f'DECODED MESSAGE: {word[:number_of_chars[0]]}')
+print(f'DECODED MESSAGE: {word[:number_of_chars[0]].lower()}')
